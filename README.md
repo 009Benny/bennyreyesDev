@@ -2,7 +2,7 @@
 
 A modern, high-performance personal portfolio built with **React 18**, **TypeScript**, and **Tailwind CSS**. Designed using a sleek **Bento Grid** layout inspired by native iOS/macOS aesthetics, featuring live components, responsive grid mechanics, and dynamic routing.
 
-![Portfolio Preview](https://via.placeholder.com/1200x630/0D0D0E/ffffff?text=Portfolio+Bento+Grid+Preview)
+https://bennyreyes.dev/
 
 ---
 

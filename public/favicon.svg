@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+    <!-- Fondo Circular Gris Oscuro -->
+    <circle cx="256" cy="256" r="240" fill="#363636" />
+    
+    <!-- Contorno del Monitor -->
+    <rect x="116" y="156" width="280" height="190" rx="16" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linejoin="round" />
+    
+    <!-- Soporte y Base del Monitor -->
+    <path d="M228,344 v36 c0,12 -20,16 -36,20 a8,8 0 0,0 2,16 h124 a8,8 0 0,0 2,-16 c-16,-4 -36,-8 -36,-20 v-36 Z" fill="#FFFFFF" />
+    
+    <!-- Símbolos de Código </> en la pantalla -->
+    <g fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Símbolo < -->
+        <path d="M 200 211 L 160 251 L 200 291" />
+        
+        <!-- Símbolo / -->
+        <path d="M 276 201 L 236 301" />
+        
+        <!-- Símbolo > -->
+        <path d="M 312 211 L 352 251 L 312 291" />
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+    <!-- Fondo Circular Gris Oscuro (igual que la referencia) -->
+    <circle cx="256" cy="256" r="240" fill="#363636" />
+    
+    <!-- Contorno del Sobre (Cuerpo) -->
+    <rect x="116" y="156" width="280" height="200" rx="16" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linejoin="round" />
+    
+    <!-- Solapas Interiores que forman la "X" -->
+    <!-- Solapa Superior -->
+    <path d="M 124 165 L 256 266 L 388 165" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Solapa Inferior Izquierda -->
+    <path d="M 124 347 L 220 238" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Solapa Inferior Derecha -->
+    <path d="M 388 347 L 292 238" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

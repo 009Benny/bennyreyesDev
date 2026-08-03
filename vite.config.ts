@@ -8,4 +8,11 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  // Dev only: forward /api requests to the `vercel dev` server (port 3000)
+  // so the serverless function works while running the normal Vite dev server.
+  server: {
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
+  },
 })

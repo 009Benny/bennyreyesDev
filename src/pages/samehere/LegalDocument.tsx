@@ -14,7 +14,11 @@ type Props = {
 /** Readable long-form layout shared by the Terms and Privacy pages. */
 export const LegalDocument = ({ lang, title, documentTitle, intro, sections }: Props) => {
     useEffect(() => {
+        const previous = document.title;
         document.title = documentTitle;
+        return () => {
+            document.title = previous;
+        };
     }, [documentTitle]);
 
     const updated = lang === 'es' ? 'Última actualización' : 'Last updated';

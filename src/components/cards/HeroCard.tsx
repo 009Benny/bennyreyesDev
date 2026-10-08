@@ -55,7 +55,7 @@ export const HeroCard = ({
 
             {/* Buttons */}
             <div className="flex flex-wrap items-center gap-3">
-                <a href="#projects" className="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition-all text-center">
+                <a href="/projects" className="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition-all text-center">
                     View my work →
                 </a>
                 <a href="/cv.pdf" target="_blank" rel="noreferrer" className="bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10 text-xs font-semibold px-5 py-2.5 rounded-full transition-all text-center">

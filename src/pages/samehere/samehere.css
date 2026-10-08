@@ -1,0 +1,184 @@
+/*
+ * Same Here palette — taken from the app's asset catalog
+ * (Background/backgroundBlue, Purple, Pink, Yellow) and the app icon.
+ */
+.samehere {
+  --sh-blue: #7da6da;
+  --sh-purple-soft: #c7bedb;
+  --sh-pink: #f2b8cc;
+  --sh-yellow: #fbe7a6;
+  --sh-cream: #fdf1d0;
+  --sh-violet: #6a3a96;
+  --sh-ink: #35194f;
+  --sh-ink-soft: #5d4a73;
+
+  color-scheme: light;
+  color: var(--sh-ink-soft);
+  font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  isolation: isolate;
+}
+
+/* The gradient sits on a fixed layer instead of background-attachment: fixed,
+   which iOS Safari ignores. It stays put while the page scrolls over it. */
+.samehere::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(70vmax 50vmax at 0% 0%, rgba(125, 166, 218, 0.85), transparent 70%),
+    radial-gradient(60vmax 50vmax at 100% 5%, rgba(242, 184, 204, 0.9), transparent 70%),
+    radial-gradient(70vmax 60vmax at 100% 100%, rgba(251, 231, 166, 0.95), transparent 70%),
+    radial-gradient(60vmax 60vmax at 0% 95%, rgba(199, 190, 219, 0.95), transparent 70%),
+    #efdfe6;
+}
+
+.samehere h1,
+.samehere h2,
+.samehere h3 {
+  color: var(--sh-ink);
+}
+
+/* The script wordmark, outlined like the logo: violet fill, cream then pink rim. */
+.sh-wordmark {
+  font-family: 'Yellowtail', 'Brush Script MT', cursive;
+  font-weight: 400;
+  color: var(--sh-violet);
+}
+
+.sh-wordmark-hero {
+  font-family: 'Yellowtail', 'Brush Script MT', cursive;
+  color: var(--sh-violet);
+  paint-order: stroke fill;
+  -webkit-text-stroke: 0.14em var(--sh-cream);
+  filter:
+    drop-shadow(0 0 0 #e9a7c0)
+    drop-shadow(0.035em 0.05em 0 #e9a7c0)
+    drop-shadow(0 0.08em 0.12em rgba(53, 25, 79, 0.25));
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+}
+
+.sh-glass-bar {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: saturate(160%) blur(18px);
+  -webkit-backdrop-filter: saturate(160%) blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+/* Matches the app's cards: glassBackground + .thinMaterial, radius 22. */
+.sh-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 22px;
+  box-shadow: 0 2px 16px rgba(53, 25, 79, 0.08);
+}
+
+.sh-btn-primary {
+  background: var(--sh-ink);
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+.sh-btn-primary:hover { background: var(--sh-violet); }
+.sh-btn-primary:active { transform: scale(0.98); }
+
+.sh-btn-ghost {
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--sh-ink);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+.sh-btn-ghost:hover { background: rgba(255, 255, 255, 0.85); }
+
+/* ---- Phone demo ---- */
+.sh-phone {
+  width: 300px;
+  aspect-ratio: 9 / 19.5;
+  border-radius: 48px;
+  padding: 12px;
+  background: #1c1424;
+  box-shadow:
+    0 0 0 2px #3a2d47,
+    0 30px 60px -20px rgba(53, 25, 79, 0.55),
+    0 18px 36px -18px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+.sh-phone-screen {
+  position: relative;
+  height: 100%;
+  border-radius: 38px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f3e1c1 0%, #d0b3bd 38%, #c7bedb 66%, #7da6da 100%);
+}
+.sh-phone-island {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 26px;
+  border-radius: 999px;
+  background: #0b0710;
+  z-index: 5;
+}
+
+.sh-bar-fill {
+  transition: width 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.sh-card-enter {
+  animation: sh-card-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes sh-card-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+
+.sh-float {
+  animation: sh-float 6s ease-in-out infinite;
+}
+@keyframes sh-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(-1deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sh-float, .sh-card-enter { animation: none; }
+  .sh-bar-fill { transition: none; }
+}
+
+/* ---- Legal documents ---- */
+.sh-legal h2 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  scroll-margin-top: 5rem;
+}
+.sh-legal p,
+.sh-legal li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.sh-legal p + p { margin-top: 0.6rem; }
+.sh-legal ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+}
+.sh-legal li + li { margin-top: 0.3rem; }
+.sh-legal strong { color: var(--sh-ink); }
+.sh-legal a {
+  color: var(--sh-violet);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

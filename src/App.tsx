@@ -4,6 +4,8 @@ import { HomePage } from './pages/HomePage';
 import { ContactPage } from './pages/ContactPage';
 import { Footer } from './components/Footer';
 import { PrivacyPage } from './pages/PrivacyPage';
+import { ProjectsPage } from './pages/ProjectsPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 import { SameHereLayout } from './pages/samehere/SameHereLayout';
 import { SameHereHome } from './pages/samehere/SameHereHome';
 import { SameHereTerms } from './pages/samehere/SameHereTerms';
@@ -30,7 +32,10 @@ export default function App() {
               subtitle="Let's get in touch!"
             />
           } />
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
+          {/* Anything that matches no route above (and isn't under /samehere) */}
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
 
         {/*

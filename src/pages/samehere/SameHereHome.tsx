@@ -113,7 +113,11 @@ export const SameHereHome = () => {
     const t = COPY[lang];
 
     useEffect(() => {
+        const previous = document.title;
         document.title = t.title;
+        return () => {
+            document.title = previous;
+        };
     }, [t.title]);
 
     return (

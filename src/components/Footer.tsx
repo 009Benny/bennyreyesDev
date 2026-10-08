@@ -13,7 +13,7 @@ export const Footer = () => {
                 {/* Lado Derecho: Enlaces de Navegación del Footer */}
                 <nav className="flex items-center gap-6 font-medium">
                     <a href="/" className="text-gray-400 hover:text-white transition-colors duration-200">About</a>
-                    {/* <a href="/projects" className="text-gray-400 hover:text-white transition-colors duration-200">Projects</a> */}
+                    <a href="/projects" className="text-gray-400 hover:text-white transition-colors duration-200">Projects</a>
                     <a href="/contact" className="text-gray-400 hover:text-white transition-colors duration-200">Contact</a>
                     <a href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">Privacy</a>
                 </nav>

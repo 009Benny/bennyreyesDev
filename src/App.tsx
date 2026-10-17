@@ -10,6 +10,7 @@ import { SameHereLayout } from './pages/samehere/SameHereLayout';
 import { SameHereHome } from './pages/samehere/SameHereHome';
 import { SameHereTerms } from './pages/samehere/SameHereTerms';
 import { SameHerePrivacy } from './pages/samehere/SameHerePrivacy';
+import { SameHereResetPassword } from './pages/samehere/SameHereResetPassword';
 
 /** The portfolio's dark chrome. App pages (e.g. /samehere) bring their own. */
 const SiteLayout = () => (
@@ -43,6 +44,12 @@ export default function App() {
           /sameHere/privacy — the URLs hard-coded in the app's AppLinks.swift —
           resolve here as well as the lowercase versions.
         */}
+        {/*
+          Where the "Forgot your password?" email lands (AppLinks.passwordReset).
+          Standalone: no nav bar, just the card — it's a one-task page.
+        */}
+        <Route path="/samehere/reset-password" element={<SameHereResetPassword />} />
+
         <Route path="/samehere" element={<SameHereLayout />}>
           <Route index element={<SameHereHome />} />
           <Route path="terms" element={<SameHereTerms />} />

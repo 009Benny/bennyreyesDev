@@ -44,7 +44,6 @@ export const SAMEHERE = {
     supportEmail: 'bennyreyesdev@gmail.com',
     developer: 'Benny Reyes',
     lastUpdated: { en: 'October 8, 2026', es: '8 de octubre de 2026' } as Localized<string>,
-    // Set this once the App Store listing is live; the page switches from
-    // "Coming soon" to a real download button.
-    appStoreUrl: null as string | null,
+    // App Store listing. Set to null to go back to the "Coming soon" state.
+    appStoreUrl: 'https://apps.apple.com/mx/app/same-here/id6823825006' as string | null,
 };

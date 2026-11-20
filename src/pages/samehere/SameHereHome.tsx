@@ -27,6 +27,7 @@ const COPY = {
         tagline: 'Share a thought. Find out who thinks the same.',
         intro: 'Ask anything with a few possible answers, answer what other people are wondering, and see where you stand — no followers, no feed to keep up with, no pressure.',
         soon: 'Coming soon to the App Store',
+        available: 'Now available',
         download: 'Download on the App Store',
         tryIt: 'Try it right here →',
         howTitle: 'How it works',
@@ -59,6 +60,7 @@ const COPY = {
         tagline: 'Comparte lo que piensas. Descubre quién piensa igual.',
         intro: 'Pregunta lo que quieras con algunas respuestas posibles, responde lo que otros se preguntan y ve dónde estás tú — sin seguidores, sin feed que perseguir, sin presión.',
         soon: 'Muy pronto en el App Store',
+        available: 'Ya disponible',
         download: 'Descárgala en el App Store',
         tryIt: 'Pruébala aquí mismo →',
         howTitle: 'Cómo funciona',
@@ -97,7 +99,11 @@ const FEATURE_ICONS = [UserRoundCheck, MessageCircleHeart, ShieldCheck, EyeOff, 
 
 const AppStoreButton = ({ soon, download }: { soon: string; download: string }) =>
     SAMEHERE.appStoreUrl ? (
-        <a href={SAMEHERE.appStoreUrl} className="sh-btn-primary inline-flex items-center gap-2 px-6 py-3 text-sm">
+        <a
+            href={SAMEHERE.appStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sh-btn-primary inline-flex items-center gap-2 px-6 py-3 text-sm">
             <Smartphone className="w-4 h-4" aria-hidden="true" />
             {download}
         </a>
@@ -127,7 +133,15 @@ export const SameHereHome = () => {
                 <div className="text-center md:text-left">
                     <div className="inline-flex items-center gap-3 mb-6">
                         <img src={appIcon} alt="Same Here app icon" className="w-16 h-16 rounded-[18px] shadow-lg" />
-                        <span className="text-xs font-extrabold uppercase tracking-[0.18em] text-[var(--sh-violet)]">{t.eyebrow}</span>
+                        <div className="flex flex-col items-start gap-1.5">
+                            <span className="text-xs font-extrabold uppercase tracking-[0.18em] text-[var(--sh-violet)]">{t.eyebrow}</span>
+                            {SAMEHERE.appStoreUrl && (
+                                <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--sh-violet)]/10 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[var(--sh-violet)]">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                                    {t.available}
+                                </span>
+                            )}
+                        </div>
                     </div>
                     <h1 className="sh-wordmark-hero text-7xl sm:text-8xl">Same Here</h1>
                     <p className="mt-6 text-2xl sm:text-3xl font-extrabold leading-tight text-[var(--sh-ink)]">{t.tagline}</p>

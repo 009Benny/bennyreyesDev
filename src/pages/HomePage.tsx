@@ -27,7 +27,7 @@ export const HomePage = () => {
         />
         <SocialCard 
             platform={SocialPlatform.APP_STORE} 
-            url="https://apps.apple.com" 
+            url="https://apps.apple.com/mx/app/same-here/id6823825006" 
         />
     </main>
 }
